@@ -1,11 +1,15 @@
 import React from 'react';
 import Header from './Header'
-
+import Main from './Main'
+import './App.scss';
 
 const App = () => {
 
     return(
-        <Header />
+        <div className='wrapper'>
+            <Header />
+            <Main />
+        </div>
     );
 }
 
