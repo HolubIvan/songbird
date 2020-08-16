@@ -1,6 +1,5 @@
 import React from 'react';
-import './Header.scss'
-import logo from './../img/logo.svg';
+import logo from './../../img/logo.svg';
 import NavList from './NavList';
 
 const Header = () => {

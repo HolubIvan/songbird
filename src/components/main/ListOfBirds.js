@@ -1,6 +1,5 @@
 import React from 'react';
 import BirdListItem from './BirdListItem';
-import './ListOfBirds.scss';
 
 const ListOfBirds = () => {
 
@@ -12,7 +11,7 @@ const ListOfBirds = () => {
     
 
     return(
-        <div class="birds-list-block">
+        <div className="birds-list-block">
             <ul className='birds-list-block__list'>
                 {birdsList}
             </ul>

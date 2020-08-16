@@ -1,6 +1,5 @@
 import React from 'react';
-import './RandomBird.scss';
-import bird from './../img/bird.jpg';
+import bird from './../../img/bird.jpg';
 
 const RandomBird = () => {
     
