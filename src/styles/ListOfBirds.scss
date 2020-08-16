@@ -1,9 +1,10 @@
 .birds-list-block{
-    width: 50%;
+    grid-column: 1/7;
     background-color: #303030;
     display: inline-block;
     border-radius: 7px;
     margin-top: 2rem;
+    margin-right: 10rem;
 
     &__list{
         list-style: none;
@@ -13,11 +14,13 @@
     }
 
     &__item{
-        padding: 1rem 3rem;
+        padding: 1.5rem 3rem;
         border: 1px solid #555;
         font-size: 1.6rem;
         color: #fff;
         font-weight: 300;
+        cursor: pointer;
+        transition: all .3s;
     }
 }
 
@@ -44,4 +47,8 @@
 
 .birds-list-block__item + .birds-list-block__item{
     border-top: none;
+}
+
+.birds-list-block__item:hover{
+    background-color: #444;
 }
