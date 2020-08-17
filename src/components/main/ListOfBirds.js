@@ -1,12 +1,14 @@
 import React from 'react';
 import BirdListItem from './BirdListItem';
 
-const ListOfBirds = () => {
+const ListOfBirds = ({birds}) => {
 
-    const birds = ['Ласточка','Ласточка','Ласточка','Ласточка','Ласточка','Ласточка'];
+    // const birds = ['Ласточка','Ласточка','Ласточка','Ласточка','Ласточка','Ласточка'];
 
-    const birdsList = birds.map((name)=>{
-        return <BirdListItem key={name} name={name}/>
+    // console.log(birds[0])
+
+    const birdsList = birds[0].map((el)=>{
+        return <BirdListItem key={el.id} name={el.name}/>
     })
     
 

@@ -21,6 +21,7 @@
 .audio-block{
 
     margin-left: 2rem;
+    width: 90%;
 
     &__bird-name{
         font-size: 2rem;
@@ -28,9 +29,11 @@
         padding: 2rem 0;
     }
 
-    &__audio{
-        margin-top: 2rem;
+    &__player{
         outline: none;
+        width: 100%;
+        margin-top: 2rem;
+        background-color: #444 !important;
     }
 }
 
@@ -38,15 +41,4 @@
 	margin: 75px auto;
 	max-width: 500px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-
-.line{
-    width: 90%;
-}
-
-.audio-player{
-    width: 90%;
-    margin-top: 2rem;
-    background-color: #444 !important;
 }

@@ -6,13 +6,13 @@ import ButtonSubmit from './ButtonSubmit';
 
 
 
-const Main = () => {
+const Main = ({birds}) => {
 
 
     return(
         <main className='main'>
-            <RandomBird />
-            <ListOfBirds />
+            <RandomBird birds={birds}/>
+            <ListOfBirds birds={birds}/>
             <BirdDetail />
             <ButtonSubmit />
         </main>
