@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "plyr": "^3.6.2",
+    "react-h5-audio-player": "^3.3.0",
     "sass": "^1.26.10"
   }
 }
