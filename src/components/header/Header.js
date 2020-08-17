@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './../../img/logo.svg';
 import NavList from './NavList';
+import Score from './Score';
 
 const Header = () => {
 
@@ -10,7 +11,7 @@ const Header = () => {
         <div className='header'>
             <div className='header__wrap'>
                 <img className='header__wrap-img' src={logo} alt='bird'></img>
-                <p className='header__wrap-score'>Score: 0</p>
+                <Score />
             </div>
             <nav className='header__nav'>
                     <NavList navItems={navItems}/>
