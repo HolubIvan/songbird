@@ -1,20 +1,18 @@
 import React from 'react';
 import BirdListItem from './BirdListItem';
 
-const ListOfBirds = ({birds}) => {
+const ListOfBirds = ({activeBirdsArray, onListItemClick}) => {
 
-    // const birds = ['Ласточка','Ласточка','Ласточка','Ласточка','Ласточка','Ласточка'];
+    // const birds = ['Ласточка','Ворон','Квочка','Ласточка','Ласточка','Ласточка'];
 
-    // console.log(birds[0])
-
-    const birdsList = birds[0].map((el)=>{
+    const birdsList = activeBirdsArray.map((el)=>{
         return <BirdListItem key={el.id} name={el.name}/>
     })
     
 
     return(
         <div className="birds-list-block">
-            <ul className='birds-list-block__list'>
+            <ul className='birds-list-block__list' onClick={onListItemClick}>
                 {birdsList}
             </ul>
         </div>
