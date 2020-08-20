@@ -14,13 +14,13 @@ const BirdDetail = ({activeBird, activeBirdsArray, userClickedBird}) => {
     return(
         <div className='bird-detail'>
 
-            <p className='bird-detail__instructions' style={{display: 'none'}}>
+            <p className='bird-detail__instructions' style={clickedBird === undefined ? {display: 'block'} : {display: 'none'}}>
                 <span>Послушайте плеер.</span>
                 <br/>
                 <span>Выберите птицу из списка.</span>
             </p>
 
-            <div className='bird-detail__description description' style={{display: 'block'}}>
+            <div className='bird-detail__description description' style={clickedBird === undefined ? {display: 'none'} : {display: 'block'}}>
                 <div className='description__body'>
                     <img className='description__body-img' src={clickedBird !== undefined ? clickedBird.image : bird} alt='bird'></img>
                     <div className='description__body-block'>
