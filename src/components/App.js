@@ -37,9 +37,6 @@ const App = () => {
         setActiveBird(activeBirdsArray[randomNumber()]);
     },[birds, currentLevel, activeBirdsArray]);
 
-    // const audioPlayerRef = React.createRef();
-    // audioPlayerRef.current.audio.current.pause();
-
     const onListItemClick = (e)=>{
         setUserClickedBird(e.target.textContent);
     }

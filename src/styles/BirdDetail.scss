@@ -3,6 +3,8 @@
     display: inline-block;
     background-color: #333;
     margin-top: 2rem;
+    border-radius: 7px;
+    border: 1px solid #555;
 
     &__instructions{
         color: #fff;
@@ -19,7 +21,7 @@
     &__body{
 
         display: flex;
-        padding: 2rem;
+        padding: 1rem 2rem 2rem;
 
         &-img{
             width: 200px;

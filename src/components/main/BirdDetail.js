@@ -9,7 +9,8 @@ const BirdDetail = ({activeBird, activeBirdsArray, userClickedBird}) => {
     }
 
     const clickedBird = activeBirdsArray.find( el => el.name === userClickedBird);
-    
+
+
     return(
         <div className='bird-detail'>
 
@@ -25,10 +26,10 @@ const BirdDetail = ({activeBird, activeBirdsArray, userClickedBird}) => {
                     <div className='description__body-block'>
                         <h3 className='description__body-name'>{clickedBird !== undefined ? clickedBird.name : '***'}</h3>
                         <p className='description__body-species'>{clickedBird !== undefined ? clickedBird.species : '***'}</p>
-                        <Player clickedBird={clickedBird}/>
+                        <Player srcAudio={clickedBird !== undefined ? clickedBird.audio : ''}/>
                     </div>
                 </div>
-                <p className='description__text'>adasdasd</p>
+                <p className='description__text'>{clickedBird !== undefined ? clickedBird.description : ''}</p>
             </div>
         </div>
     );

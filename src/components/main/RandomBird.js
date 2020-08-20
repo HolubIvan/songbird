@@ -16,7 +16,7 @@ const RandomBird = ({activeBird}) => {
             <div className='random-bird__audio-block audio-block'>
                 <p className='audio-block__bird-name'>**** {activeBird.name}</p>
                 <hr></hr>
-                <Player activeBird={activeBird}/>
+                <Player srcAudio={activeBird.audio}/>
             </div>
         </div>
     );
