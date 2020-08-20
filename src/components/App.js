@@ -47,7 +47,7 @@ const App = () => {
     
     return(
         <div className='wrapper'>
-            <Header score={score}/>
+            <Header score={score} currentLevel={currentLevel}/>
             <Main activeBirdsArray={activeBirdsArray} onListItemClick={onListItemClick} activeBird={activeBird} onNextLevelButtonCLick={onNextLevelButtonCLick} userClickedBird={userClickedBird} />
         </div>
     );

@@ -3,7 +3,7 @@ import logo from './../../img/logo.svg';
 import NavList from './NavList';
 import Score from './Score';
 
-const Header = ({score}) => {
+const Header = ({score, currentLevel}) => {
 
     const navItems = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы']
 
@@ -14,7 +14,7 @@ const Header = ({score}) => {
                 <Score score={score}/>
             </div>
             <nav className='header__nav'>
-                    <NavList navItems={navItems}/>
+                    <NavList navItems={navItems} currentLevel={currentLevel}/>
             </nav>
         </div>
     );

@@ -1,8 +1,11 @@
 import React from 'react';
 
-const NavItem = ({name})=>{
+const NavItem = ({name, activeList})=>{
+    
+    const classForList = `header__nav-item ${activeList}`;
+
     return(
-        <li className='header__nav-item'>
+        <li className={classForList}>
             {name}
         </li>
     );

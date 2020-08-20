@@ -1,10 +1,10 @@
 import React from 'react';
 import NavItem from './NavItem';
 
-const NavList = ({navItems})=>{
+const NavList = ({navItems, currentLevel})=>{
 
-    const lists = navItems.map((el)=>{
-        return <NavItem  key={el} name={el}/>
+    const lists = navItems.map((el, index)=>{
+        return <NavItem key={index} name={el} activeList={currentLevel === index ? 'activeItem' : ''}/>
     })
 
     return(
