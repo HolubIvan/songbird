@@ -42,7 +42,6 @@ const App = () => {
         }
     },[userClickedBird])
   
-
     const onListItemClick = (e)=>{
         setUserClickedBird(e.target.textContent);
         setClickedUserList(e.target);
