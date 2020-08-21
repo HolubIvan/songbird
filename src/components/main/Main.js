@@ -6,12 +6,12 @@ import ButtonSubmit from './ButtonSubmit';
 
 
 
-const Main = ({activeBirdsArray, onListItemClick, activeBird, onNextLevelButtonCLick, userClickedBird}) => {
+const Main = ({activeBirdsArray, onListItemClick, activeBird, onNextLevelButtonCLick, userClickedBird, roundWin}) => {
 
 
     return(
         <main className='main'>
-            <RandomBird activeBird={activeBird} />
+            <RandomBird activeBird={activeBird} roundWin={roundWin}/>
             <ListOfBirds activeBirdsArray={activeBirdsArray} onListItemClick={onListItemClick}/>
             <BirdDetail activeBird={activeBird} activeBirdsArray={activeBirdsArray} userClickedBird={userClickedBird} />
             <ButtonSubmit onNextLevelButtonCLick={onNextLevelButtonCLick}/>

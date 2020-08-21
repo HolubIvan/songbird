@@ -34,8 +34,15 @@
     border-bottom-right-radius: 7px;
 }
 
-.birds-list-block__item::before{
-    content: '';
+.birds-list-block__item + .birds-list-block__item{
+    border-top: none;
+}
+
+.birds-list-block__item:hover{
+    background-color: #444;
+}
+
+.li-btn{
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -43,12 +50,4 @@
     border-radius: 50%;
     position: relative;
     left: -10px;
-}
-
-.birds-list-block__item + .birds-list-block__item{
-    border-top: none;
-}
-
-.birds-list-block__item:hover{
-    background-color: #444;
 }

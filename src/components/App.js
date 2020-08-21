@@ -4,22 +4,9 @@ import Main from './main/Main'
 import './../styles/App.scss';
 import randomNumber from './main/RandomNumber';
 import birdsData from '../data/birdsData';
-
-const exampleActiveBirdsArray = [{audio: "https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3",
-    description: "Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.",
-    id: 1,
-    image: "https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg",
-    name: "Воробей",
-    species: "Passer domesticus"}];
-
-const exampleActiveBird= {audio: "https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3",
-    description: "Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.",
-    id: 1,
-    image: "https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg",
-    name: "ящер",
-    species: "Passer domesticus"};    
-
-
+import winSound from './../sounds/win.mp3';
+import loseSound from './../sounds/lose.mp3'
+import {exampleActiveBirdsArray, exampleActiveBird} from './main/examples';
 
 const App = () => {
 
@@ -31,14 +18,34 @@ const App = () => {
     const [activeBird, setActiveBird] = useState(exampleActiveBird);
     const [userClickedBird, setUserClickedBird] = useState(null);
     const [activeBirdsArray, setActiveBirdsArray] = useState(exampleActiveBirdsArray);
+    const [roundWin, setRoundWin] = useState(false);
+    const [clickedUserList, setClickedUserList] = useState(false);
   
     useEffect(()=>{
         setActiveBirdsArray(birds[currentLevel]);
         setActiveBird(activeBirdsArray[randomNumber()]);
     },[birds, currentLevel, activeBirdsArray]);
 
+    useEffect(()=>{
+        if(userClickedBird !== null){
+            if(userClickedBird === activeBird.name){
+                setRoundWin(true);
+                setScore(score+3);
+                const audio = new Audio(winSound);
+                audio.play();
+                clickedUserList.firstChild.style.backgroundColor = '#04a77f';
+            } else {
+                const audio = new Audio(loseSound);
+                audio.play();
+                clickedUserList.firstChild.style.backgroundColor = '#d62c1a';
+            }
+        }
+    },[userClickedBird])
+  
+
     const onListItemClick = (e)=>{
         setUserClickedBird(e.target.textContent);
+        setClickedUserList(e.target);
     }
 
     const onNextLevelButtonCLick = (e)=>{
@@ -48,7 +55,7 @@ const App = () => {
     return(
         <div className='wrapper'>
             <Header score={score} currentLevel={currentLevel}/>
-            <Main activeBirdsArray={activeBirdsArray} onListItemClick={onListItemClick} activeBird={activeBird} onNextLevelButtonCLick={onNextLevelButtonCLick} userClickedBird={userClickedBird} />
+            <Main activeBirdsArray={activeBirdsArray} onListItemClick={onListItemClick} activeBird={activeBird} onNextLevelButtonCLick={onNextLevelButtonCLick} userClickedBird={userClickedBird} roundWin={roundWin}/>
         </div>
     );
 }
