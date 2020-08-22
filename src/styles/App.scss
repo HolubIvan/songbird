@@ -4,6 +4,8 @@
 @import './Main.scss';
 @import './RandomBird.scss';
 @import './ButtonSubmit.scss';
+@import './responsive/mixins.scss';
+@import './responsive/variables.scss';
 
 *,
 *::after,
@@ -29,10 +31,8 @@ body {
     margin: 0 auto;
     background-color: #222;
     padding-top: 2rem;
-    // background-image: url('./../../img/forest.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    // background-attachment: fixed;
-    // background: url('./../../img/forest.jpg') center center no-repeat fixed;
+
+    @include media-tablet {
+        height: auto;
+    }
 }

@@ -1,3 +1,5 @@
+@import './responsive/mixins.scss';
+
 .button-submit{
     grid-column: 1/12;
     margin-top: 1.5rem;
@@ -12,6 +14,15 @@
     transition: all .3s;
     cursor: pointer;
     box-shadow: 0 2px 7px #333;
+
+    @include media-tablet {
+        grid-column: 3/10;
+        margin: 2rem 0; 
+    }
+
+    @include media-mobile {
+        margin: 2rem 0; 
+    }
 }
 
 .button-submit:hover{

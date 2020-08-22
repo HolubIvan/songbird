@@ -1,3 +1,5 @@
+@import './responsive/mixins.scss';
+
 .birds-list-block{
     grid-column: 1/7;
     background-color: #303030;
@@ -5,6 +7,16 @@
     border-radius: 7px;
     margin-top: 2rem;
     margin-right: 10rem;
+    
+    @include media-tablet {
+        grid-column: 3/10;
+        margin-right: 0;
+    }
+
+    @include media-mobile {
+        grid-column: 2/11;
+        margin-right: 0;
+    }
 
     &__list{
         list-style: none;
