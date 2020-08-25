@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
+import SpanForList from "./SpanForList";
 
-
-const BirdListItem = ({name}) => {
-
-    return(
-        <li className="birds-list-block__item">
-            <span className='li-btn'></span>
-            {name}
-        </li>
-    );
-}
+const BirdListItem = ({ name, userGuessColorChange, id }) => {
+  return (
+    <li className="birds-list-block__item" data-key={id}>
+      <SpanForList userGuessColorChange={userGuessColorChange} />
+      {name}
+    </li>
+  );
+};
 
 export default BirdListItem;
