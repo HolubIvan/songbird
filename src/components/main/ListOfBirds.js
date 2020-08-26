@@ -5,7 +5,7 @@ const ListOfBirds = ({
   activeBirdsArray,
   onListItemClick,
   userGuessColorChange,
-  clickedUserList,
+  // clickedUserList,
 }) => {
   const birdsList = activeBirdsArray.map((el) => {
     return (
@@ -14,7 +14,7 @@ const ListOfBirds = ({
         id={el.id}
         name={el.name}
         userGuessColorChange={userGuessColorChange}
-        clickedUserList={clickedUserList}
+        // clickedUserList={clickedUserList}
       />
     );
   });

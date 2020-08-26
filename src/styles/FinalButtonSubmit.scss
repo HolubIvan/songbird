@@ -1,3 +1,5 @@
+@import './responsive/mixins.scss';
+
 .final-button{
     width: 50rem;
     height: 40px;
@@ -11,6 +13,14 @@
     transition: all .3s;
     cursor: pointer;
     box-shadow: 0 2px 7px #444;
+
+    @include media-mobile {
+        width: 30rem;
+    }
+
+    @include media-mobilesmall {
+        width: 24rem;
+    }
 }
 
 .final-button:hover{

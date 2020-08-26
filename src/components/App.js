@@ -19,7 +19,9 @@ const App = () => {
   const [currentLevel, setCurrentLevel] = useState(0);
   const [activeBird, setActiveBird] = useState([...exampleActiveBirdsArray]);
   const [userClickedBird, setUserClickedBird] = useState(null);
-  const [activeBirdsArray, setActiveBirdsArray] = useState(exampleActiveBirdsArray);
+  const [activeBirdsArray, setActiveBirdsArray] = useState(
+    exampleActiveBirdsArray
+  );
   const [roundWin, setRoundWin] = useState(false);
   const [clickedUserList, setClickedUserList] = useState(null);
   const [userGuessColor, setUserGuessColor] = useState(colors[0]);
@@ -27,7 +29,6 @@ const App = () => {
   useEffect(() => {
     if (currentLevel > 1) {
       setGameEnded(true);
-      console.log("win");
     } else {
       setActiveBirdsArray(birds[currentLevel]);
       setActiveBird(activeBirdsArray[randomNumber()]);
@@ -41,12 +42,12 @@ const App = () => {
         setScore(score + userRightAnswerScore);
         const audio = new Audio(winSound);
         audio.play();
-        clickedUserList.firstChild.style.backgroundColor = "#04a77f";
+        // clickedUserList.firstChild.style.backgroundColor = "#04a77f";
       } else {
         setUserRightAnswerScore(userRightAnswerScore - 1);
         const audio = new Audio(loseSound);
         audio.play();
-        clickedUserList.firstChild.style.backgroundColor = "#d62c1a";
+        // clickedUserList.firstChild.style.backgroundColor = "#d62c1a";
       }
     }
   }, [userClickedBird]);
@@ -54,7 +55,11 @@ const App = () => {
   const onListItemClick = (e) => {
     if (!roundWin) {
       setUserClickedBird(e.target.textContent);
-      setClickedUserList(e.target);
+
+      //listen to click and get parent ul
+
+      // setClickedUserList(e.target);
+      console.log(e.target.getAttribute('data-key'))
     } else {
       return false;
     }
@@ -64,9 +69,9 @@ const App = () => {
     setCurrentLevel(currentLevel + 1);
     setRoundWin(false);
     setUserRightAnswerScore(5);
-    document.querySelectorAll(".li-btn").forEach((el) => {
-      el.style.backgroundColor = "#444";
-    });
+    // document.querySelectorAll(".li-btn").forEach((el) => {
+    //   el.style.backgroundColor = "#444";
+    // });
   };
 
   const onFinalButtonClick = (e) => {
@@ -76,7 +81,6 @@ const App = () => {
     setCurrentLevel(0);
     setClickedUserList(null);
     setRoundWin(false);
-    setClickedUserList(null);
   };
 
   return (
@@ -90,10 +94,14 @@ const App = () => {
         userClickedBird={userClickedBird}
         roundWin={roundWin}
         userGuessColorChange={userGuessColor}
-        clickedUserList={clickedUserList}
+        // clickedUserList={clickedUserList}
         gameEnded={gameEnded}
       />
-      <FinalResultPage score={score} onFinalButtonClick={onFinalButtonClick} gameEnded={gameEnded}/>
+      <FinalResultPage
+        score={score}
+        onFinalButtonClick={onFinalButtonClick}
+        gameEnded={gameEnded}
+      />
     </div>
   );
 };

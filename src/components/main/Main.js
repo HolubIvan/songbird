@@ -12,7 +12,7 @@ const Main = ({
   userClickedBird,
   roundWin,
   userGuessColorChange,
-  clickedUserList,
+  // clickedUserList,
   gameEnded
 }) => {
   if(!gameEnded){
@@ -23,7 +23,7 @@ const Main = ({
           activeBirdsArray={activeBirdsArray}
           onListItemClick={onListItemClick}
           userGuessColorChange={userGuessColorChange}
-          clickedUserList={clickedUserList}
+          // clickedUserList={clickedUserList}
         />
         <BirdDetail
           activeBird={activeBird}
