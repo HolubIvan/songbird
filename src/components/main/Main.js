@@ -4,6 +4,8 @@ import ListOfBirds from "./ListOfBirds";
 import BirdDetail from "./BirdDetail";
 import ButtonSubmit from "./ButtonSubmit";
 
+
+
 const Main = ({
   activeBirdsArray,
   onListItemClick,
@@ -11,7 +13,7 @@ const Main = ({
   onNextLevelButtonCLick,
   userClickedBird,
   roundWin,
-  userGuessColorChange,
+  // userGuessColorChange,
   // clickedUserList,
   gameEnded
 }) => {
@@ -22,7 +24,7 @@ const Main = ({
         <ListOfBirds
           activeBirdsArray={activeBirdsArray}
           onListItemClick={onListItemClick}
-          userGuessColorChange={userGuessColorChange}
+          // userGuessColorChange={userGuessColorChange}
           // clickedUserList={clickedUserList}
         />
         <BirdDetail

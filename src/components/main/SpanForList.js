@@ -1,9 +1,13 @@
 import React from "react";
 
-const SpanForList = ({ userGuessColorChange }) => {
-  const spanColor = userGuessColorChange;
+const SpanForList = ({ 
+  // userGuessColorChange 
+}) => {
+  // const spanColor = userGuessColorChange;
   return (
-    <span className="li-btn" style={{ backgroundColor: spanColor }}></span>
+    <span className="li-btn" 
+    // style={{ backgroundColor: spanColor }}
+    ></span>
   );
 };
 

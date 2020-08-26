@@ -4,8 +4,8 @@ import BirdListItem from "./BirdListItem";
 const ListOfBirds = ({
   activeBirdsArray,
   onListItemClick,
-  userGuessColorChange,
-  // clickedUserList,
+  // userGuessColorChange,
+  // clickedUserList
 }) => {
   const birdsList = activeBirdsArray.map((el) => {
     return (
@@ -13,7 +13,7 @@ const ListOfBirds = ({
         key={el.id}
         id={el.id}
         name={el.name}
-        userGuessColorChange={userGuessColorChange}
+        // userGuessColorChange={userGuessColorChange}
         // clickedUserList={clickedUserList}
       />
     );

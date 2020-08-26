@@ -10,8 +10,8 @@ import loseSound from "./../sounds/lose.mp3";
 import { exampleActiveBirdsArray } from "./main/example";
 
 const App = () => {
+
   const birds = birdsData;
-  const colors = ["#444", "#04a77f", "#d62c1a"];
 
   const [score, setScore] = useState(0);
   const [gameEnded, setGameEnded] = useState(false);
@@ -23,8 +23,9 @@ const App = () => {
     exampleActiveBirdsArray
   );
   const [roundWin, setRoundWin] = useState(false);
+
   const [clickedUserList, setClickedUserList] = useState(null);
-  const [userGuessColor, setUserGuessColor] = useState(colors[0]);
+  // const [userGuessColor, setUserGuessColor] = useState(colors[0]);
 
   useEffect(() => {
     if (currentLevel > 1) {
@@ -56,9 +57,9 @@ const App = () => {
     if (!roundWin) {
       setUserClickedBird(e.target.textContent);
 
-      //listen to click and get parent ul
 
-      // setClickedUserList(e.target);
+      //listen to click and get parent ul
+      
       console.log(e.target.getAttribute('data-key'))
     } else {
       return false;
@@ -79,8 +80,8 @@ const App = () => {
     setScore(0);
     setUserRightAnswerScore(5);
     setCurrentLevel(0);
-    setClickedUserList(null);
     setRoundWin(false);
+    // setClickedUserList(null);
   };
 
   return (
@@ -93,9 +94,9 @@ const App = () => {
         onNextLevelButtonCLick={onNextLevelButtonCLick}
         userClickedBird={userClickedBird}
         roundWin={roundWin}
-        userGuessColorChange={userGuessColor}
-        // clickedUserList={clickedUserList}
         gameEnded={gameEnded}
+        // userGuessColorChange={userGuessColor}
+        // clickedUserList={clickedUserList}
       />
       <FinalResultPage
         score={score}

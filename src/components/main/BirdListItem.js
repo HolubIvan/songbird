@@ -3,13 +3,14 @@ import SpanForList from "./SpanForList";
 
 const BirdListItem = ({ 
   name, 
-  userGuessColorChange, 
-  id 
+  id,
+  // userGuessColorChange
+   
 }) => {
   return (
     <li className="birds-list-block__item" data-key={id}>
       <SpanForList 
-        userGuessColorChange={userGuessColorChange} 
+        // userGuessColorChange={userGuessColorChange} 
       />
       {name}
     </li>
