@@ -2,6 +2,7 @@
   "name": "songbird",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/HolubIvan/songbird.git",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -30,5 +31,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "plyr": "^3.6.2",
+    "react-h5-audio-player": "^3.3.0",
+    "sass": "^1.26.10"
   }
 }
