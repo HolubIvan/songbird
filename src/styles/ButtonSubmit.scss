@@ -1,38 +1,38 @@
-@import './responsive/mixins.scss';
+@import "./responsive/mixins.scss";
 
-.button-submit{
-    grid-column: 1/12;
-    margin-top: 1.5rem;
-    background-color: #333;
-    outline: none;
-    height: 35px;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 300;
-    border: 1px solid #444;
-    border-radius: 7px;
-    transition: all .3s;
-    cursor: pointer;
-    box-shadow: 0 2px 7px #333;
+.button-submit {
+  grid-column: 1/12;
+  margin-top: 1.5rem;
+  background-color: #333;
+  outline: none;
+  height: 35px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  border: 1px solid #444;
+  border-radius: 7px;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 7px #333;
 
-    @include media-tablet {
-        grid-column: 3/10;
-        margin: 2rem 0; 
-    }
+  @include media-tablet {
+    grid-column: 3/10;
+    margin: 2rem 0;
+  }
 
-    @include media-mobile {
-        margin: 2rem 0; 
-    }
+  @include media-mobile {
+    margin: 2rem 0;
+  }
 }
 
-.button-submit:hover{
-    background-color:#04a77f;
-    box-shadow: 0 5px 10px #444;
-    transform: translateY(-4px);
-}   
+.button-submit:hover {
+  background-color: #04a77f;
+  box-shadow: 0 5px 10px #444;
+  transform: translateY(-4px);
+}
 
-.button-submit:active{
-    background-color: #008966;
-    box-shadow: 0 3px 7px #333;
-    transform: translateY(-2px);
-}   
+.button-submit:active {
+  background-color: #008966;
+  box-shadow: 0 3px 7px #333;
+  transform: translateY(-2px);
+}

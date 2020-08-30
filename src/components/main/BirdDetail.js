@@ -43,9 +43,7 @@ const BirdDetail = ({ activeBird, activeBirdsArray, userClickedBird }) => {
             <p className="description__body-species">
               {clickedBird ? clickedBird.species : "***"}
             </p>
-            <Player
-              srcAudio={clickedBird ? clickedBird.audio : ""}
-            />
+            <Player srcAudio={clickedBird ? clickedBird.audio : ""} />
           </div>
         </div>
         <p className="description__text">

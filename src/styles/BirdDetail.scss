@@ -1,101 +1,99 @@
-@import './responsive/mixins.scss';
+@import "./responsive/mixins.scss";
 
-.bird-detail{
-    grid-column: 7/12;
-    display: inline-block;
-    background-color: #333;
-    margin-top: 2rem;
-    border-radius: 7px;
-    border: 1px solid #555;
+.bird-detail {
+  grid-column: 7/12;
+  display: inline-block;
+  background-color: #333;
+  margin-top: 2rem;
+  border-radius: 7px;
+  border: 1px solid #555;
+
+  @include media-tablet {
+    grid-column: 3/10;
+  }
+
+  @include media-mobile {
+    grid-column: 2/11;
+  }
+
+  &__instructions {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 2rem 0 0 2rem;
 
     @include media-tablet {
-        grid-column: 3/10;
+      padding: 2rem 0 2rem 2rem;
     }
 
-    @include media-mobile {
-        grid-column: 2/11;
+    @include media-mobilesmall {
+      font-size: 1.6rem;
     }
-
-    &__instructions{
-        color: #fff;
-        font-size: 2rem;
-        font-weight: 300;
-        padding: 2rem 0 0 2rem;
-
-        @include media-tablet {
-            padding: 2rem 0 2rem 2rem;
-        }
-
-        @include media-mobilesmall {
-            font-size: 1.6rem;
-        }
-
-    }
+  }
 }
 
-.description{
-    width: 100%;
-    height: 100%;
+.description {
+  width: 100%;
+  height: 100%;
 
-    &__body{
+  &__body {
+    display: flex;
+    padding: 1rem 2rem 2rem;
 
-        display: flex;
-        padding: 1rem 2rem 2rem;
-
-        @include media-mobile {
-            flex-direction: column;
-        }
-
-        &-img{
-            width: 200px;
-            height: 155px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin-right: 2rem;
-            margin-top: 1.5rem;
-
-            @include media-mobile {
-                display: block;
-                margin: 1.5rem auto;
-            }
-        }
-
-        &-name{
-            font-size: 2.5rem;
-            color: #fff;
-            font-weight: 700;
-            border-bottom: 1px solid #444;
-            padding: 0 0 5px 0;
-
-            @include media-mobile {
-                text-align: center;
-            }
-        }
-
-        &-species{
-            font-size: 2.2rem;
-            color: #fff;
-            font-weight: 400;
-            border-bottom: 1px solid #444;
-            padding: 5px 0;
-
-            @include media-mobile {
-                text-align: center;
-            }
-        }
+    @include media-mobile {
+      flex-direction: column;
     }
 
-    &__text{
-        width: 90%;
-        margin: 0 auto;
-        color: #fff;
-        font-size: 1.4rem;
-        font-weight: 300;
-        line-height: 1.5;
+    &-img {
+      width: 200px;
+      height: 155px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 2rem;
+      margin-top: 1.5rem;
 
-        @include media-mobile {
-            width: 80%;
-            padding: 1rem;
-        }
+      @include media-mobile {
+        display: block;
+        margin: 1.5rem auto;
+      }
     }
+
+    &-name {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: 700;
+      border-bottom: 1px solid #444;
+      padding: 0 0 5px 0;
+
+      @include media-mobile {
+        text-align: center;
+      }
+    }
+
+    &-species {
+      font-size: 2.2rem;
+      color: #fff;
+      font-weight: 400;
+      border-bottom: 1px solid #444;
+      padding: 5px 0;
+
+      @include media-mobile {
+        text-align: center;
+      }
+    }
+  }
+
+  &__text {
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include media-mobile {
+      width: 80%;
+      padding: 1rem;
+    }
+  }
 }

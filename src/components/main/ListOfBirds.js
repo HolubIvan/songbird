@@ -1,22 +1,9 @@
 import React from "react";
 import BirdListItem from "./BirdListItem";
 
-const ListOfBirds = ({
-  activeBirdsArray,
-  onListItemClick,
-  // userGuessColorChange,
-  // clickedUserList
-}) => {
+const ListOfBirds = ({ activeBirdsArray, onListItemClick }) => {
   const birdsList = activeBirdsArray.map((el) => {
-    return (
-      <BirdListItem
-        key={el.id}
-        id={el.id}
-        name={el.name}
-        // userGuessColorChange={userGuessColorChange}
-        // clickedUserList={clickedUserList}
-      />
-    );
+    return <BirdListItem key={el.id} id={el.id} name={el.name} />;
   });
 
   return (
