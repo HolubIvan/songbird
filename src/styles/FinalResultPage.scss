@@ -2,7 +2,7 @@
 
 .result {
   max-width: 1100px;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   background-color: #333;
   border-radius: 7px;
   display: flex;
@@ -27,7 +27,7 @@
     font-size: 6rem;
     color: #fff;
     font-weight: 300;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
 
     @include media-tablet {
       font-size: 4rem;
@@ -47,7 +47,7 @@
     font-size: 2.5rem;
     color: #fff;
     font-weight: 300;
-    margin: 3rem 0 5rem 0;
+    margin: 1rem 0 1rem 0;
 
     @include media-tablet {
       font-size: 1.8rem;
@@ -59,5 +59,37 @@
       margin: 3rem 0 4rem 0;
       text-align: center;
     }
+  }
+}
+
+.certificate {
+  max-width: 400px;
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  @include media-mobile {
+    max-width: 250px;
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+}
+
+.result__certificate-description {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 2rem;
+
+  @include media-tablet {
+    font-size: 1.8rem;
+  }
+
+  @include media-mobile {
+    font-size: 1.4rem;
+  }
+
+  @include media-mobilesmall {
+    margin: 0 0 2rem;
+    text-align: center;
   }
 }

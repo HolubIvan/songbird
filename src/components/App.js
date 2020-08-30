@@ -48,6 +48,7 @@ const App = () => {
         clickedUserList.firstChild.style.backgroundColor = "#d62c1a";
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userClickedBird]);
 
   const onListItemClick = (e) => {
